@@ -211,3 +211,4 @@ NDA → Scoping → Contract/SoW → RoE
 > **Contract** establishes the formal agreement.
 > **RoE** establishes the testing rules.
 > **Kick-off** confirms everything before testing starts.
+
