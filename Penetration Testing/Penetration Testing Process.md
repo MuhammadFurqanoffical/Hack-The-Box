@@ -1,3 +1,9 @@
+## Table of Contents
+
+1. [Pre-Engagement](#pre-engagement)
+2. [Information Gathering](#information-gathering)
+
+# Section: 7
 # Pre-Engagement — Notes to Remember
 
 ## 1. What is Pre-Engagement?
@@ -213,3 +219,177 @@ NDA → Scoping → Contract/SoW → RoE
 > **Kick-off** confirms everything before testing starts.
 > **Written permission** is essential.
 > **Physical testing** requires a Contractors Agreement.
+
+# Section: 8
+# Information Gathering
+
+## What is Information Gathering?
+
+The phase **after Pre-Engagement** and after all contracts are signed.
+
+**Goal:** Collect as much useful information as possible about the:
+
+* Company
+* Employees
+* Infrastructure
+* Network organization
+
+> **Information = the foundation of a successful penetration test.**
+
+---
+
+## 4 Main Categories
+
+Remember:
+
+```text
+OSINT
+  ↓
+Infrastructure Enumeration
+  ↓
+Service Enumeration
+  ↓
+Host Enumeration
+```
+
+All four should be performed during a penetration test.
+
+---
+
+## 1. Open-Source Intelligence (OSINT)
+
+**OSINT = collecting publicly available information** about a company or individuals.
+
+### What can we find?
+
+* Company information
+* Employees
+* Social media information
+* Job postings
+* Public meetings/events
+* Dependencies and connections
+* Passwords
+* Hashes
+* API keys / tokens
+* SSH keys
+* Exposed source code
+
+> **Main idea:** OSINT finds information that is publicly exposed and may help an attacker.
+
+**Important:** If critical information such as passwords or SSH keys is discovered, the client's administrator should review it before testing continues.
+
+---
+
+## 2. Infrastructure Enumeration
+
+**Goal:** Understand the company's overall **internet/intranet infrastructure**.
+
+### Identify:
+
+* DNS / name servers
+* Mail servers
+* Web servers
+* Cloud instances
+* Hosts and IP addresses
+* Security controls such as firewalls/WAFs
+
+The discovered hosts/IPs should be compared with the **approved scope**.
+
+> **Main idea:** Infrastructure Enumeration = **Map the network/infrastructure.**
+
+---
+
+## 3. Service Enumeration
+
+**Goal:** Identify the **services running on hosts**.
+
+For each service, determine:
+
+* Service name
+* Version
+* Information it provides
+* Purpose
+* Whether the version is outdated
+
+Older service versions may contain **known vulnerabilities**.
+
+> **Main idea:** Service Enumeration = **What services are running?**
+
+---
+
+## 4. Host Enumeration
+
+**Goal:** Examine each host in the **scoping document**.
+
+### Identify:
+
+* Operating system
+* Services
+* Service versions
+* Open ports
+* Host's role
+* Network connections
+* Configuration information
+
+From an internal perspective, we may also find:
+
+* Sensitive files
+* Local services
+* Scripts
+* Applications
+* Other useful information
+
+> **Main idea:** Host Enumeration = **What is this host and what is running on it?**
+
+---
+
+# Pillaging
+
+**Pillaging = collecting sensitive information from an already compromised host.**
+
+It happens **after exploitation/access**.
+
+### Examples
+
+* Employee information
+* Customer data
+* Sensitive files
+* Credentials/information useful for further attacks
+
+Pillaging can help with:
+
+* Understanding attack impact
+* **Privilege escalation**
+* **Lateral movement**
+
+> **Important:** Pillaging is not a separate penetration-testing phase. It is part of **information gathering and privilege escalation**.
+
+---
+
+# ⭐ What to Remember
+
+```text
+Information Gathering
+        ↓
+   ┌────┴────┐
+   ↓         ↓
+  OSINT   Infrastructure
+             ↓
+          Services
+             ↓
+           Hosts
+```
+
+### One-Line Definitions
+
+| Topic                          | Remember                                   |
+| ------------------------------ | ------------------------------------------ |
+| **OSINT**                      | Find publicly available information        |
+| **Infrastructure Enumeration** | Map the infrastructure                     |
+| **Service Enumeration**        | Identify running services & versions       |
+| **Host Enumeration**           | Examine individual hosts                   |
+| **Pillaging**                  | Collect sensitive information after access |
+
+### 🧠 Core Idea
+
+> **Information Gathering = Collect information → Understand the target → Find attack opportunities.**
